@@ -1,0 +1,371 @@
+{
+  "jeopardy":[
+    {
+        "name": "SPORTS DESK",
+        "questions": [
+          {
+            "value": 100,
+            "question": "THIS TEAM DEFEATED THE KANSAS CITY CHIEFS IN FEBRUARY 2025 TO WIN SUPER BOWL LIX.",
+            "answer": "Who are the Philadelphia Eagles?"
+          },
+          {
+            "value": 200,
+            "question": "IN APRIL 2025, THIS STAR GOLFER FINALLY WON THE MASTERS, COMPLETING HIS CAREER GRAND SLAM.",
+            "answer": "Who is Rory McIlroy?"
+          },
+          {
+            "value": 300,
+            "question": "THE LOS ANGELES DODGERS DEFEATED THIS TEAM TO WIN THE 2025 WORLD SERIES.",
+            "answer": "Who are the Toronto Blue Jays?"
+          },
+          {
+            "value": 400,
+            "question": "THIS HOCKEY LEGEND FINALLY BROKE WAYNE GRETZKY'S ALL-TIME GOAL SCORING RECORD IN APRIL 2025.",
+            "answer": "Who is Alexander Ovechkin?"
+          },
+          {
+            "value": 500,
+            "question": "THIS NBA TEAM WON THE 2025 CHAMPIONSHIP, MARKING THE FIRST TITLE FOR THE FRANCHISE SINCE THEY WERE THE SEATTLE SUPERSONICS.",
+            "answer": "Who are the Oklahoma City Thunder?"
+          }
+        ]
+      },
+      {
+        "name": "POP CULTURE",
+        "questions": [
+          {
+            "value": 100,
+            "question": "IN AUGUST 2025, THIS POP STAR AND TRAVIS KELCE OFFICIALLY ANNOUNCED THEIR ENGAGEMENT.",
+            "answer": "Who is Taylor Swift?"
+          },
+          {
+            "value": 200,
+            "question": "THIS HIT HBO SERIES SET IN A LUXURY RESORT RELEASED ITS THIRD SEASON IN 2025, FILMED IN THAILAND.",
+            "answer": "What is The White Lotus?"
+          },
+          {
+            "value": 300,
+            "question": "SHE WON THE OSCAR FOR BEST ACTRESS IN 2025 FOR HER ROLE IN THE CRITICALLY ACCLAIMED FILM ANORA.",
+            "answer": "Who is Mikey Madison?"
+          },
+          {
+            "value": 400,
+            "question": "AFTER 37 YEARS, THIS FASHION ICON ANNOUNCED SHE WAS STEPPING DOWN AS THE HEAD OF VOGUE MAGAZINE.",
+            "answer": "Who is Anna Wintour?"
+          },
+          {
+            "value": 500,
+            "question": "THIS COMEDIAN AND LATE-NIGHT HOST OFFICIALLY LEFT HIS LONG-RUNNING ABC TALK SHOW IN 2025.",
+            "answer": "Who is Jimmy Kimmel?"
+          }
+        ]
+      },
+      {
+        "name": "WORLD NEWS",
+        "questions": [
+          {
+            "value": 100,
+            "question": "IN MAY 2025, ROBERT FRANCIS PREVOST WAS ELECTED AS THE FIRST POPE FROM THIS COUNTRY.",
+            "answer": "What is the United States?"
+          },
+          {
+            "value": 200,
+            "question": "THIS FORMER TECH CEO AND BILLIONAIRE HAD A PUBLIC FALLING OUT WITH DONALD TRUMP IN THE SUMMER OF 2025.",
+            "answer": "Who is Elon Musk?"
+          },
+          {
+            "value": 300,
+            "question": "IN OCTOBER 2025, THIS MUSIC MOGUL WAS SENTENCED TO OVER FOUR YEARS IN PRISON FOLLOWING HIS FEDERAL TRIAL.",
+            "answer": "Who is Sean 'Diddy' Combs?"
+          },
+          {
+            "value": 400,
+            "question": "THE LONGTIME RULING GOVERNMENT OF THIS MIDDLE EASTERN COUNTRY COLLAPSED IN MAY 2025.",
+            "answer": "What is Syria?"
+          },
+          {
+            "value": 500,
+            "question": "FRIEDRICH MERZ BECAME THE NEW CHANCELLOR OF THIS EUROPEAN NATION IN 2025.",
+            "answer": "What is Germany?"
+          }
+        ]
+      },
+      {
+        "name": "TRENDING NOW",
+        "questions": [
+          {
+            "value": 100,
+            "question": "THIS HOBBY, WHICH INVOLVES PLAYING A MINI-VERSION OF TENNIS, REMAINED THE FASTEST-GROWING SPORT IN THE U.S. IN 2025.",
+            "answer": "What is Pickleball?"
+          },
+          {
+            "value": 200,
+            "question": "THESE QUIRKY, MONSTER-LIKE COLLECTIBLE TOYS BECAME A HUGE GLOBAL FASHION ACCESSORY IN 2025.",
+            "answer": "What is Labubu (or Pop Mart)?"
+          },
+          {
+            "value": 300,
+            "question": "IN 2025, THIS SOCIAL MEDIA APP WAS OFFICIALLY BANNED IN THE UNITED STATES UNLESS IT WAS SOLD BY ITS CHINESE PARENT COMPANY.",
+            "answer": "What is TikTok?"
+          },
+          {
+            "value": 400,
+            "question": "OXFORD DICTIONARY CHOSE THIS TWO-WORD PHRASE AS THE 2025 WORD OF THE YEAR TO DESCRIBE INFLAMMATORY ONLINE CONTENT.",
+            "answer": "What is Rage Bait?"
+          },
+          {
+            "value": 500,
+            "question": "THIS COLOR WAS DECLARED THE 'PANTONE COLOR OF THE YEAR' FOR 2025.",
+            "answer": "What is Future Dusk (a dark violet/blue)?"
+          }
+        ]
+      },
+      {
+        "name": "MUSIC SCENE",
+        "questions": [
+          {
+            "value": 100,
+            "question": "THIS RAPPER HEADLINED THE 2025 SUPER BOWL HALFTIME SHOW IN NEW ORLEANS.",
+            "answer": "Who is Kendrick Lamar?"
+          },
+          {
+            "value": 200,
+            "question": "AFTER DEFYING EXPECTATIONS FOR YEARS, THIS LEGENDARY SINGER FINALLY WON ALBUM OF THE YEAR FOR COWBOY CARTER IN 2025.",
+            "answer": "Who is Beyoncé?"
+          },
+          {
+            "value": 300,
+            "question": "THIS ARTIST'S HIT 'HOT TO GO!' HELPED HER SWEEP THE BEST NEW ARTIST AWARDS IN EARLY 2025.",
+            "answer": "Who is Chappell Roan?"
+          },
+          {
+            "value": 400,
+            "question": "THIS POP STAR RELEASED HER 12TH STUDIO ALBUM IN 2025 TITLED THE LIFE OF A SHOWGIRL.",
+            "answer": "Who is Taylor Swift?"
+          },
+          {
+            "value": 500,
+            "question": "THIS BRITISH SINGER RETURNED TO MUSIC IN 2025 WITH THE ALBUM WEST END GIRL AFTER A 7-YEAR BREAK.",
+            "answer": "Who is Lily Allen?"
+          }
+        ]
+      },
+      {
+        "name": "THE BIG SCREEN",
+        "questions": [
+          {
+            "value": 100,
+            "question": "THIS HIGHLY ANTICIPATED SECOND PART OF THE MUSICAL MOVIE STARRING ARIANA GRANDE WAS RELEASED IN LATE 2025.",
+            "answer": "What is Wicked: Part Two?"
+          },
+          {
+            "value": 200,
+            "question": "THIS DISNEY SEQUEL ABOUT A FOX AND A RABBIT COP DUO WAS ONE OF THE BIGGEST HITS OF 2025.",
+            "answer": "What is Zootopia 2?"
+          },
+          {
+            "value": 300,
+            "question": "AT THE 2025 ACADEMY AWARDS, THIS FILM ABOUT A CASINO WORKER WON BEST PICTURE.",
+            "answer": "What is Anora?"
+          },
+          {
+            "value": 400,
+            "question": "THIS HORROR SEQUEL ABOUT A TERRIFYING CLOWN NAMED ART BROKE INDIE BOX OFFICE RECORDS IN LATE 2024 AND EARLY 2025.",
+            "answer": "What is Terrifier 3?"
+          },
+          {
+            "value": 500,
+            "question": "THIS ACTOR BROKE THE RECORD FOR THE LONGEST OSCAR SPEECH IN HISTORY AT THE 2025 CEREMONY.",
+            "answer": "Who is Adrien Brody?"
+          }
+        ]
+      }
+  ],
+  "double-jeopardy":[
+    {
+        "name": "OUT OF THIS WORLD",
+        "questions": [
+          {
+            "value": 200,
+            "question": "IN 2025, NASA AND SPACEX ANNOUNCED THE FIRST CIVILIAN CREW TO ORBIT THE MOON WOULD INCLUDE THIS JAPANESE BILLIONAIRE.",
+            "answer": "Who is Yusaku Maezawa?"
+          },
+          {
+            "value": 400,
+            "question": "THE FIRST-EVER COMMERCIAL SPACE MISSION PILOTED BY A NATIONAL FROM THIS COUNTRY LAUNCHED IN JUNE 2025.",
+            "answer": "What is India?"
+          },
+          {
+            "value": 600,
+            "question": "THIS FAMOUS POP SINGER FLEW TO THE EDGE OF SPACE ON A BLUE ORIGIN ROCKET IN APRIL 2025.",
+            "answer": "Who is Katy Perry?"
+          },
+          {
+            "value": 800,
+            "question": "IN 2025, THE NUMBER OF CONFIRMED PLANETS OUTSIDE OUR SOLAR SYSTEM OFFICIALLY PASSED THIS NUMBER.",
+            "answer": "What is 6,000?"
+          },
+          {
+            "value": 1000,
+            "question": "THIS RECORD-BREAKING ASTRONAUT COMMANDED THE AX-4 MISSION IN JUNE 2025.",
+            "answer": "Who is Peggy Whitson?"
+          }
+        ]
+      },
+      {
+        "name": "TECH & AI",
+        "questions": [
+          {
+            "value": 200,
+            "question": "2025 BECAME KNOWN AS THE YEAR OF THIS TYPE OF AI, WHICH CAN DO TASKS ON YOUR COMPUTER FOR YOU.",
+            "answer": "What is Agentic AI (or AI Agents)?"
+          },
+          {
+            "value": 400,
+            "question": "THIS CHINESE AI MODEL, RELEASED IN JANUARY 2025, RIVALED CHATGPT BUT COST MUCH LESS TO BUILD.",
+            "answer": "What is DeepSeek?"
+          },
+          {
+            "value": 600,
+            "question": "THIS STARTUP RELEASED THE WORLD'S FIRST POPULAR 'AI AGENT' NAMED MANUS IN MARCH 2025.",
+            "answer": "What is Manus AI?"
+          },
+          {
+            "value": 800,
+            "question": "THIS MAJOR TECH COMPANY OFFICIALLY DISCONTINUED ITS INFAMOUS 'TOUCH BAR' ON ALL LAPTOP MODELS IN 2025.",
+            "answer": "Who is Apple?"
+          },
+          {
+            "value": 1000,
+            "question": "IN 2025, THE EU OFFICIALLY BANNED THIS CONTROVERSIAL TECHNOLOGY IN ALL PUBLIC PLACES.",
+            "answer": "What is Facial Recognition?"
+          }
+        ]
+      },
+      {
+        "name": "GAMING GIANTS",
+        "questions": [
+          {
+            "value": 200,
+            "question": "NINTENDO FINALLY RELEASED THE LONG-AWAITED SUCCESSOR TO THIS HYBRID CONSOLE IN APRIL 2025.",
+            "answer": "What is the Nintendo Switch 2?"
+          },
+          {
+            "value": 400,
+            "question": "THIS ROCKSTAR GAMES TITLE BECAME THE MOST ANTICIPATED GAME OF THE YEAR BEFORE SLIDING ITS RELEASE WINDOW INTO 2026.",
+            "answer": "What is Grand Theft Auto VI (GTA 6)?"
+          },
+          {
+            "value": 600,
+            "question": "CLAIR OBSCUR: EXPEDITION 33 STUNNED THE INDUSTRY BY WINNING GAME OF THE YEAR AT THE 2025 AWARDS, DEVELOPED BY THIS STUDIO.",
+            "answer": "Who is Sandfall Interactive?"
+          },
+          {
+            "value": 800,
+            "question": "IN A HISTORIC CROSS-PLATFORM MOVE, MICROSOFT BROUGHT THIS ICONIC SHOOTER FRANCHISE'S ORIGINAL CAMPAIGN TO THE PS5 IN OCTOBER 2025.",
+            "answer": "What is Halo (Halo: Combat Evolved)?"
+          },
+          {
+            "value": 1000,
+            "question": "TEAM CHERRY FINALLY RELEASED THIS LONG-AWAITED INDIE SEQUEL IN 2025 AFTER YEARS OF INTERNET MEMES ABOUT ITS DELAY.",
+            "answer": "What is Hollow Knight: Silksong?"
+          }
+        ]
+      },
+      {
+        "name": "BUSINESS SHAKE-UPS",
+        "questions": [
+          {
+            "value": 200,
+            "question": "IN OCTOBER 2025, THIS STREAMING GIANT ANNOUNCED A MASSIVE $82 BILLION DEAL TO ACQUIRE WARNER BROS. DISCOVERY.",
+            "answer": "Who is Netflix?"
+          },
+          {
+            "value": 400,
+            "question": "THIS ITALIAN LUXURY BRAND REINFORCED 'MADE IN ITALY' PRIDE BY ACQUIRING VERSACE FOR 1.25 BILLION EUROS IN DECEMBER 2025.",
+            "answer": "Who is Prada?"
+          },
+          {
+            "value": 600,
+            "question": "LEGENDARY DESIGNER GIORGIO ARMANI PASSED AWAY IN SEPTEMBER 2025, LEAVING THIS MAN AS THE NEW CEO OF HIS FASHION EMPIRE.",
+            "answer": "Who is Giuseppe Marsocci?"
+          },
+          {
+            "value": 800,
+            "question": "IN ONE OF THE LARGEST DEALS OF THE YEAR, UNION PACIFIC ANNOUNCED AN $85 BILLION MERGER WITH THIS OTHER MAJOR RAILROAD.",
+            "answer": "Who is Norfolk Southern?"
+          },
+          {
+            "value": 1000,
+            "question": "PRADA'S ACQUISITION OF VERSACE OCCURRED SHORTLY AFTER THIS CREATIVE DIRECTOR STEPPED DOWN FOLLOWING NEARLY 30 YEARS AT THE HELM.",
+            "answer": "Who is Donatella Versace?"
+          }
+        ]
+      },
+      {
+        "name": "HEALTH & MEDICINE",
+        "questions": [
+          {
+            "value": 200,
+            "question": "2025 MARKED THE YEAR THAT DRUGS FOR THIS CONDITION, LIKE ZEPBOUND AND WEGOVY, WERE OFFICIALLY RECOGNIZED FOR REDUCING HEART ATTACK RISKS.",
+            "answer": "What is Obesity?"
+          },
+          {
+            "value": 400,
+            "question": "IN DECEMBER 2025, THE CDC OFFICIALLY RECOGNIZED THIS TICK-BORNE ILLNESS AS A CHRONIC CONDITION FOR THE FIRST TIME.",
+            "answer": "What is Lyme Disease?"
+          },
+          {
+            "value": 600,
+            "question": "SURGEONS IN CHINA MADE HISTORY IN OCTOBER 2025 BY TRANSPLANTING THIS ANIMAL'S GENETICALLY MODIFIED LIVER INTO A HUMAN.",
+            "answer": "What is a Pig?"
+          },
+          {
+            "value": 800,
+            "question": "CALIFORNIA AND SEVERAL OTHER STATES BEGAN REQUIRING FOOD COMPANIES TO REMOVE THIS SPECIFIC DYE FROM PRODUCTS BY 2025 DUE TO HEALTH CONCERNS.",
+            "answer": "What is Red Dye 3?"
+          },
+          {
+            "value": 1000,
+            "question": "THE FDA GRANTED BREAKTHROUGH DESIGNER STATUS TO A NEW TREATMENT FOR 'ESSENTIAL TREMOR' CALLED THIS.",
+            "answer": "What is Ulizacaltamine?"
+          }
+        ]
+      },
+      {
+        "name": "CLIMATE & NATURE",
+        "questions": [
+          {
+            "value": 200,
+            "question": "SCIENTISTS CONFIRMED THAT 2025 IS ON TRACK TO BE THE SECOND OR THIRD HOTTEST YEAR ON RECORD, SURPASSED ONLY BY THIS YEAR.",
+            "answer": "What is 2024?"
+          },
+          {
+            "value": 400,
+            "question": "THE COP30 CLIMATE SUMMIT WAS HELD IN NOVEMBER 2025 IN THIS BRAZILIAN CITY LOCATED IN THE AMAZON RAINFOREST.",
+            "answer": "What is Belém?"
+          },
+          {
+            "value": 600,
+            "question": "THIS FAMOUS PRIMATOLOGIST AND CONSERVATIONIST PASSED AWAY IN 2025 AT THE AGE OF 91.",
+            "answer": "Who is Jane Goodall?"
+          },
+          {
+            "value": 800,
+            "question": "FOR THE FIRST TIME IN HISTORY, THIS TYPE OF ENERGY PRODUCED MORE GLOBAL ELECTRICITY THAN COAL IN 2025.",
+            "answer": "What is Renewable Energy (or Wind/Solar)?"
+          },
+          {
+            "value":1000,
+            "question": "IN 2025, SCIENTISTS CONFIRMED THE LARGEST EVER BLEACHING EVENT AFFECTING NEARLY 84% OF THE WORLD'S TOTAL POPULATION OF THESE.",
+            "answer": "What are Coral Reefs?"
+          }
+        ]
+      }
+  ],
+  "final-jeopardy":{
+    "category": "HISTORIC MILESTONES",
+    "question": "IN JUNE 2025, THE UNITED STATES CELEBRATED THE 250TH ANNIVERSARY OF THE FOUNDING OF THIS BRANCH OF THE MILITARY.",
+    "answer": "What is the United States Army?"
+  }
+}
