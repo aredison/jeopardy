@@ -5,6 +5,7 @@
   if ($settings['number_of_players']) {
     $numPlayers = $settings['number_of_players'];
   }
+  $colWidth = 7 - $numPlayers;
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -55,7 +56,7 @@
 
     <div class="panel-footer">
       <?php for ($i = 1; $i <= $numPlayers; $i++) { ?>
-        <div class="col-md-4" id="player-<?php echo $i ?>-score-div">
+        <div class="col-md-<?php echo $colWidth ?>" id="player-<?php echo $i ?>-score-div">
           <h4><span id="player-<?php echo $i ?>-name">Player <?php echo $i ?></span>: <span id="player-<?php echo $i ?>-score">$0</span></h4>
         </div>
       <?php } ?>
@@ -105,7 +106,7 @@
         <div id="scoring-buttons" class="text-center modal-footer">
           <?php for ($i = 1; $i <= $numPlayers; $i++) { ?>  
             <div class="score-button-group">
-              <div class="col-md-4">
+              <div class="col-md-<?php echo $colWidth; ?>">
                 <button type="button" class="btn btn-danger score-button" id="p<?php echo $i ?>-wrong-button">
                   <span class="glyphicon glyphicon-remove"></span>P<?php echo $i ?>
                 </button> 
@@ -144,7 +145,7 @@
 
         <div id="adjust-name-input-div" class="modal-body text-center">
           <?php for ($i = 1; $i <= $numPlayers; $i++) { ?> 
-            <div class="score-button-group col-md-4">
+            <div class="score-button-group col-md-<?php echo $colWidth ?>">
               <input type="text" class="form-control" placeholder="Player <?php echo $i ?> Name" id="name-player-<?php echo $i ?>-input" />
             </div>
           <?php } ?>
@@ -158,7 +159,7 @@
 
         <div id="adjust-score-input-div" class="modal-body text-center">
           <?php for ($i = 1; $i <= $numPlayers; $i++) { ?> 
-            <div class="score-button-group col-md-4">
+            <div class="score-button-group col-md-<?php echo $colWidth ?>">
               <input type="text" class="form-control" placeholder="Player <?php echo $i ?> Score" id="score-player-<?php echo $i ?>-input" />
             </div>
           <?php } ?>
@@ -172,7 +173,7 @@
         </div>
         <div id="adjust-control-input-div" class="modal-body text-center">
           <?php for ($i = 1; $i <= $numPlayers; $i++) { ?> 
-            <div class="control-button-group col-md-4">
+            <div class="control-button-group col-md-<?php echo $colWidth ?>">
               <label class="radio-inline"><input type="radio" placeholder="Player <?php echo $i ?> Control" id="control-player-<?php echo $i ?>-input" 
               name="control-input" value="<?php echo $i ?>"/></label>
             </div>
@@ -222,7 +223,7 @@
 
         <div id="final-jeopardy-score-input-div" class="modal-body text-center">
           <?php for ($i = 1; $i <= $numPlayers; $i++) { ?> 
-            <div class="score-button-group col-md-4">
+            <div class="score-button-group col-md-<?php echo $colWidth ?>">
               <input type="text" class="form-control" placeholder="P<?php echo $i ?> Wager" id="wager-player-<?php echo $i ?>-input" />
             </div>
           <?php } ?>
@@ -233,7 +234,7 @@
         <div id="final-scoring-buttons" class="text-center modal-footer">
           <?php for ($i = 1; $i <= $numPlayers; $i++) { ?>
             <div class="score-button-group">
-              <div class="col-md-4">
+              <div class="col-md-<?php echo $colWidth ?>">
                 <button type="button" class="btn btn-danger final-score-button" id="final-p<?php echo $i ?>-wrong-button">
                   <span class="glyphicon glyphicon-remove"></span>P<?php echo $i ?>
                 </button> 

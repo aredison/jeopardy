@@ -3,7 +3,6 @@ var score_player = {}
 var playerTranslation = {}
 $.getJSON("settings.json", function(json) {
     if (json.number_of_players) {
-        console.log(json.number_of_players)
         numPlayers = json.number_of_players;
         for(var i=1; i<= numPlayers; i++) {
             score_player[i] = 0
@@ -291,8 +290,6 @@ function updateScore(){
             score_text = "$" + score_player[i].toString();
             $('#player-' + i + '-score').css('color', 'white');
         }
-        // score_player[i] < 0 ? score_text = '-$' + Math.abs(score_player[i]).toString() : score_text = "$" + score_player[i].toString();
-        // score_player[i] < 0 ? $('#player-' + i + '-score').css('color', 'red') : $('#player-' + i + '-score').css('color', 'white');
         $('#player-' + i + '-score').empty().text(score_text);
     }
 
