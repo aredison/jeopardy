@@ -1,3 +1,18 @@
+var numPlayers = 3;
+var score_player = {}
+var playerTranslation = {}
+$.getJSON("settings.json", function(json) {
+    if (json.number_of_players) {
+        console.log(json.number_of_players)
+        numPlayers = json.number_of_players;
+        for(var i=1; i<= numPlayers; i++) {
+            score_player[i] = 0
+            playerTranslation[i] = "Player " + i;
+        }    
+    }
+});
+
+
 $(function(){
     $('#game-load-modal').modal('show');
     chooseTheme = Math.random() < 0.5;
@@ -18,9 +33,9 @@ $(function(){
                 var data = $.parseJSON(fileText);
                 jsonData = data;
                 currentBoard = jsonData[rounds[currentRound]];
-                $("#player-1-name").empty().text(playerTranslation[1]);
-                $("#player-2-name").empty().text(playerTranslation[2]);
-                $("#player-3-name").empty().text(playerTranslation[3]);
+                for(var i=1; i<= numPlayers; i++) {
+                    $("#player-" + i + "-name").empty().text(playerTranslation[i]);
+                }
                 loadBoard();
                 openingTheme.pause();
                 openingTheme.currentTime = 0;
@@ -119,11 +134,12 @@ $(function(){
         $('#daily-double-wager').click(function(){
             var inputDailyDoubleValue = $('#daily-double-wager-input').val();
             var maxRoundWager = Math.max.apply(Math, currentBoard[0]['questions'].map(function(o){return o.value}));
-            var scoreVariable = 'score_player_' + control;
+            // var scoreVariable = 'score_player_' + control;
 
             //get max of maxRoundWager and controlling user score.
             if ( !(isNaN(inputDailyDoubleValue)) && inputDailyDoubleValue !== '' && parseInt(inputDailyDoubleValue) >= 5
-            	&& Math.max(maxRoundWager, window[scoreVariable]) >= parseInt(inputDailyDoubleValue) ) {
+                && Math.max(maxRoundWager,score_player[control]) >= parseInt(inputDailyDoubleValue) ) {
+            	// && Math.max(maxRoundWager, window[scoreVariable]) >= parseInt(inputDailyDoubleValue) ) {
 
                 value = parseInt(inputDailyDoubleValue);
                 $('#modal-answer-title').empty().text(currentBoard[category].name + ' - $' + value);
@@ -158,12 +174,10 @@ $(function(){
     });
     $('#score-adjust').click(function(){
         $('#score-adjust-modal').modal('show');
-        $('#name-player-1-input').val(playerTranslation[1]);
-        $('#name-player-2-input').val(playerTranslation[2]);
-        $('#name-player-3-input').val(playerTranslation[3]);
-        $('#score-player-1-input').val(score_player_1);
-        $('#score-player-2-input').val(score_player_2);
-        $('#score-player-3-input').val(score_player_3);
+        for(var i=1; i<= numPlayers; i++) {
+            $('#name-player-' + i + '-input').val(playerTranslation[i]);
+            $('#score-player-' + i + '-input').val(score_player[i]);
+        }
         $("input[name=control-input][value=" + control + "]").attr('checked', 'checked');
         adjustScores();
     });
@@ -205,12 +219,8 @@ $(function(){
 
 });
 
-var score_player_1 = 0;
-var score_player_2 = 0;
-var score_player_3 = 0;
 var control = 1;
 var rounds = ['jeopardy', 'double-jeopardy', 'final-jeopardy'];
-var playerTranslation = {1: 'Red', 2: 'Blue', 3: 'Green'};
 var currentBoard;
 var currentRound = 0;
 var isTimerActive = false;
@@ -249,11 +259,11 @@ function resetTimer() {
 function adjustScores(){
     $('#score-adjust-save').click(function(){
         for (var i = 1; i < 4; i++) {
-            var scoreVariableName = 'score_player_' + i;
+            // var scoreVariableName = 'score_player_' + i;
             var inputName = '#score-player-' + i + '-input';
             var newScoreValue = $(inputName).val();
             if (!(isNaN(newScoreValue))) {
-                window[scoreVariableName] = parseInt(newScoreValue);
+                score_player[i] = parseInt(newScoreValue);
             }
 
             var nameInputName = '#name-player-' + i + '-input';
@@ -272,17 +282,19 @@ function adjustScores(){
 
 function updateScore(){
 	var score_text = '';
-	score_player_1 < 0 ? score_text = '-$' + Math.abs(score_player_1).toString() : score_text = "$" + score_player_1.toString();
-	score_player_1 < 0 ? $('#player-1-score').css('color', 'red') : $('#player-1-score').css('color', 'white');
-    $('#player-1-score').empty().text(score_text);
-
-	score_player_2 < 0 ? score_text = '-$' + Math.abs(score_player_2).toString() : score_text = "$" + score_player_2.toString();
-	score_player_2 < 0 ? $('#player-2-score').css('color', 'red') : $('#player-2-score').css('color', 'white');
-    $('#player-2-score').empty().text(score_text);
-
-	score_player_3 < 0 ? score_text = '-$' + Math.abs(score_player_3).toString() : score_text = "$" + score_player_3.toString();
-	score_player_3 < 0 ? $('#player-3-score').css('color', 'red') : $('#player-3-score').css('color', 'white');
-    $('#player-3-score').empty().text(score_text);
+    console.log(score_player)
+    for(var i=1; i<= numPlayers; i++) {
+        if (score_player[i] < 0) {
+            score_text = '-$' + Math.abs(score_player[i]).toString()
+            $('#player-' + i + '-score').css('color', 'red')
+        } else {
+            score_text = "$" + score_player[i].toString();
+            $('#player-' + i + '-score').css('color', 'white');
+        }
+        // score_player[i] < 0 ? score_text = '-$' + Math.abs(score_player[i]).toString() : score_text = "$" + score_player[i].toString();
+        // score_player[i] < 0 ? $('#player-' + i + '-score').css('color', 'red') : $('#player-' + i + '-score').css('color', 'white');
+        $('#player-' + i + '-score').empty().text(score_text);
+    }
 
 	$('#control-player').empty().text(playerTranslation[control]);
     //$('#player-2-score').empty().text(score_player_2);
@@ -319,21 +331,29 @@ function loadBoard() {
         else {
             $('#final-image').empty().hide();
         }
-        $('#wager-player-1-input').attr("placeholder", playerTranslation[1] + " Wager");
-        $('#wager-player-2-input').attr("placeholder", playerTranslation[2] + " Wager");
-        $('#wager-player-3-input').attr("placeholder", playerTranslation[3] + " Wager");
+        for(var i=1; i<= numPlayers; i++) {
+            $('#wager-player-' + i + '-input').attr("placeholder", playerTranslation[i] + " Wager");
+        }
     }
     else {
 	    if (rounds[currentRound] === "double-jeopardy") {
-		    if (score_player_1 <= score_player_2 && score_player_1 <= score_player_3) {
-			    control = 1;
-		    }
-		    else if (score_player_2 <= score_player_3) {
-			    control = 2;
-		    }
-		    else {
-			    control = 3;
-		    }
+            control = 1
+            max_score = 0
+            for (var i=1; i<= numPlayers; i++) {
+                if (score_player[i] > max_score) {
+                    max_score = score_player[i];
+                    control = i
+                }
+            }
+		    // if (score_player_1 <= score_player_2 && score_player_1 <= score_player_3) {
+			//     control = 1;
+		    // }
+		    // else if (score_player_2 <= score_player_3) {
+			//     control = 2;
+		    // }
+		    // else {
+			//     control = 3;
+		    // }
 	    }
         $('#control-player').empty().text(playerTranslation[control]);
         $('#end-round').show();
@@ -407,10 +427,12 @@ function handleAnswer(){
         var answerValue = parseInt($(this).data('value'));
         var buttonAction = buttonID.substr(3, 5);
         var playerNumber = buttonID.charAt(1);
-        var scoreVariable = 'score_player_' + playerNumber;
+        // var scoreVariable = 'score_player_' + playerNumber;
 
-        buttonAction === 'right' ? window[scoreVariable] += answerValue
-            : window[scoreVariable] -= answerValue;
+        // buttonAction === 'right' ? window[scoreVariable] += answerValue
+        //     : window[scoreVariable] -= answerValue;
+        buttonAction === 'right' ? score_player[playerNumber] += answerValue
+            : score_player[playerNumber] -= answerValue;
         $(this).prop('disabled', true);
         var otherButtonID = '#p' + playerNumber + '-' + (buttonAction === 'right' ? 'wrong' : 'right') + '-button';
         $(otherButtonID).prop('disabled', true);
@@ -467,15 +489,17 @@ function handleFinalAnswer(){
         var playerNumber = buttonID.charAt(7);
         var wagerID = '#wager-player-' + playerNumber + '-input';
         var wager = $(wagerID).val() == '' ? 0 : parseInt($(wagerID).val());
-        var scoreVariable = 'score_player_' + playerNumber;
+        // var scoreVariable = 'score_player_' + playerNumber;
         var otherButtonID = '#final-p' + playerNumber + '-' +
             (buttonAction === 'right' ? 'wrong' : 'right') + '-button';
 
-        buttonAction === 'right' ? window[scoreVariable] += wager : window[scoreVariable] -= wager;
+        // buttonAction === 'right' ? window[scoreVariable] += wager : window[scoreVariable] -= wager;
+        buttonAction === 'right' ? score_player[playerNumber] += wager : score_player[playerNumber] -= wager;
+
 
         $(this).prop('disabled', true);
         $(otherButtonID).prop('disabled', true);
-        $(wagerID).prop('disabled', true).val('$' + window[scoreVariable]);
+        $(wagerID).prop('disabled', true).val(score_player[playerNumber]);
 
         updateScore();
 

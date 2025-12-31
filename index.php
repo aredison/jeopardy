@@ -1,3 +1,11 @@
+<?php
+  require_once('settings.php');
+  $settings = getSettings();
+  $numPlayers = 3;
+  if ($settings['number_of_players']) {
+    $numPlayers = $settings['number_of_players'];
+  }
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -46,17 +54,11 @@
     <div class="panel-body" id="main-board"></div>
 
     <div class="panel-footer">
-      <div class="col-md-4" id="player-1-score-div">
-        <h4><span id="player-1-name">Red</span>: <span id="player-1-score">$0</span></h4>
-      </div>
-
-      <div class="col-md-4" id="player-2-score-div">
-        <h4><span id="player-2-name">Blue</span>: <span id="player-2-score">$0</span></h4>
-      </div>
-
-      <div class="col-md-4" id="player-3-score-div">
-        <h4><span id="player-3-name">Green</span>: <span id="player-3-score">$0</span></h4>
-      </div>
+      <?php for ($i = 1; $i <= $numPlayers; $i++) { ?>
+        <div class="col-md-4" id="player-<?php echo $i ?>-score-div">
+          <h4><span id="player-<?php echo $i ?>-name">Player <?php echo $i ?></span>: <span id="player-<?php echo $i ?>-score">$0</span></h4>
+        </div>
+      <?php } ?>
 
       <div class="clearfix"></div>
     </div>
@@ -101,38 +103,18 @@
         </div><!-- /.answer -->
 
         <div id="scoring-buttons" class="text-center modal-footer">
-          <div class="score-button-group">
-            <div class="col-md-4">
-              <button type="button" class="btn btn-danger score-button" id="p1-wrong-button">
-                <span class="glyphicon glyphicon-remove"></span>P1
-              </button> 
-              <button type="button" class="btn btn-success score-button" id="p1-right-button">
-                <span class="glyphicon glyphicon-ok"></span>P1
-              </button>
+          <?php for ($i = 1; $i <= $numPlayers; $i++) { ?>  
+            <div class="score-button-group">
+              <div class="col-md-4">
+                <button type="button" class="btn btn-danger score-button" id="p<?php echo $i ?>-wrong-button">
+                  <span class="glyphicon glyphicon-remove"></span>P<?php echo $i ?>
+                </button> 
+                <button type="button" class="btn btn-success score-button" id="p<?php echo $i ?>-right-button">
+                  <span class="glyphicon glyphicon-ok"></span>P<?php echo $i ?>
+                </button>
+              </div>
             </div>
-          </div>
-
-          <div class="score-button-group">
-            <div class="col-md-4">
-              <button type="button" class="btn btn-danger score-button" id="p2-wrong-button">
-                <span class="glyphicon glyphicon-remove"></span>P2
-              </button>
-              <button type="button" class="btn btn-success score-button" id="p2-right-button">
-                <span class="glyphicon glyphicon-ok"></span>P2
-              </button>
-            </div>
-          </div>
-
-          <div class="score-button-group">
-            <div class="col-md-4">
-              <button type="button" class="btn btn-danger score-button" id="p3-wrong-button">
-                <span class="glyphicon glyphicon-remove"></span>P3
-              </button>
-              <button type="button" class="btn btn-success score-button" id="p3-right-button">
-                <span class="glyphicon glyphicon-ok"></span>P3
-              </button>
-            </div>
-          </div>
+          <?php } ?>
         </div><!-- /.scoring-buttons -->
 
         <div id="question-timer" class="text-center modal-footer">
@@ -161,17 +143,11 @@
         </div>
 
         <div id="adjust-name-input-div" class="modal-body text-center">
-          <div class="score-button-group col-md-4">
-            <input type="text" class="form-control" placeholder="Player 1 Name" id="name-player-1-input" />
-          </div>
-
-          <div class="score-button-group col-md-4">
-            <input type="text" class="form-control" placeholder="Player 2 Name" id="name-player-2-input" />
-          </div>
-
-          <div class="score-button-group col-md-4">
-            <input type="text" class="form-control" placeholder="Player 3 Name" id="name-player-3-input" />
-          </div>
+          <?php for ($i = 1; $i <= $numPlayers; $i++) { ?> 
+            <div class="score-button-group col-md-4">
+              <input type="text" class="form-control" placeholder="Player <?php echo $i ?> Name" id="name-player-<?php echo $i ?>-input" />
+            </div>
+          <?php } ?>
 
           <div class="clearfix"></div>
         </div>
@@ -181,17 +157,11 @@
         </div>
 
         <div id="adjust-score-input-div" class="modal-body text-center">
-          <div class="score-button-group col-md-4">
-            <input type="text" class="form-control" placeholder="Player 1 Score" id="score-player-1-input" />
-          </div>
-
-          <div class="score-button-group col-md-4">
-            <input type="text" class="form-control" placeholder="Player 2 Score" id="score-player-2-input" />
-          </div>
-
-          <div class="score-button-group col-md-4">
-            <input type="text" class="form-control" placeholder="Player 3 Score" id="score-player-3-input" />
-          </div>
+          <?php for ($i = 1; $i <= $numPlayers; $i++) { ?> 
+            <div class="score-button-group col-md-4">
+              <input type="text" class="form-control" placeholder="Player <?php echo $i ?> Score" id="score-player-<?php echo $i ?>-input" />
+            </div>
+          <?php } ?>
 
           <div class="clearfix"></div>
         </div>
@@ -201,20 +171,12 @@
           <h4 class="modal-title text-center">Adjust Control</h4>
         </div>
         <div id="adjust-control-input-div" class="modal-body text-center">
-          <div class="control-button-group col-md-4">
-            <label class="radio-inline"><input type="radio" placeholder="Player 1 Control" id="control-player-1-input" 
-            name="control-input" value="1"/></label>
-          </div>
-
-          <div class="control-button-group col-md-4">
-            <label class="radio-inline"><input type="radio" placeholder="Player 2 Control" id="control-player-2-input" 
-            name="control-input" value="2"/></label>
-          </div>
-
-          <div class="control-button-group col-md-4">
-            <label class="radio-inline"><input type="radio" placeholder="Player 3 Control" id="control-player-3-input" 
-            name="control-input" value="3"/></label>
-          </div>
+          <?php for ($i = 1; $i <= $numPlayers; $i++) { ?> 
+            <div class="control-button-group col-md-4">
+              <label class="radio-inline"><input type="radio" placeholder="Player <?php echo $i ?> Control" id="control-player-<?php echo $i ?>-input" 
+              name="control-input" value="<?php echo $i ?>"/></label>
+            </div>
+          <?php } ?>
 
           <div class="clearfix"></div>
         </div>
@@ -259,54 +221,28 @@
         </div>
 
         <div id="final-jeopardy-score-input-div" class="modal-body text-center">
-          <div class="score-button-group col-md-4">
-            <input type="text" class="form-control" placeholder="Red Wager" id="wager-player-1-input" />
-          </div>
-
-          <div class="score-button-group col-md-4">
-            <input type="text" class="form-control" placeholder="Blue Wager" id="wager-player-2-input" />
-          </div>
-
-          <div class="score-button-group col-md-4">
-            <input type="text" class="form-control" placeholder="Green Wager" id="wager-player-3-input" />
-          </div>
+          <?php for ($i = 1; $i <= $numPlayers; $i++) { ?> 
+            <div class="score-button-group col-md-4">
+              <input type="text" class="form-control" placeholder="P<?php echo $i ?> Wager" id="wager-player-<?php echo $i ?>-input" />
+            </div>
+          <?php } ?>
 
           <div class="clearfix"></div>
         </div>
 
         <div id="final-scoring-buttons" class="text-center modal-footer">
-          <div class="score-button-group">
-            <div class="col-md-4">
-              <button type="button" class="btn btn-danger final-score-button" id="final-p1-wrong-button">
-                <span class="glyphicon glyphicon-remove"></span>P1
-              </button> 
-              <button type="button" class="btn btn-success final-score-button" id="final-p1-right-button">
-                <span class="glyphicon glyphicon-ok"></span>P1
-              </button>
+          <?php for ($i = 1; $i <= $numPlayers; $i++) { ?>
+            <div class="score-button-group">
+              <div class="col-md-4">
+                <button type="button" class="btn btn-danger final-score-button" id="final-p<?php echo $i ?>-wrong-button">
+                  <span class="glyphicon glyphicon-remove"></span>P<?php echo $i ?>
+                </button> 
+                <button type="button" class="btn btn-success final-score-button" id="final-p<?php echo $i ?>-right-button">
+                  <span class="glyphicon glyphicon-ok"></span>P<?php echo $i ?>
+                </button>
+              </div>
             </div>
-          </div>
-
-          <div class="score-button-group">
-            <div class="col-md-4">
-              <button type="button" class="btn btn-danger final-score-button" id="final-p2-wrong-button">
-                <span class="glyphicon glyphicon-remove"></span>P2
-              </button>
-              <button type="button" class="btn btn-success final-score-button" id="final-p2-right-button">
-                <span class="glyphicon glyphicon-ok"></span>P2
-              </button>
-            </div>
-          </div>
-
-          <div class="score-button-group">
-            <div class="col-md-4">
-              <button type="button" class="btn btn-danger final-score-button" id="final-p3-wrong-button">
-                <span class="glyphicon glyphicon-remove"></span>P3
-              </button>
-              <button type="button" class="btn btn-success final-score-button" id="final-p3-right-button">
-                <span class="glyphicon glyphicon-ok"></span>P3
-              </button>
-            </div>
-          </div>
+          <?php } ?>
         </div><!-- /.scoring-buttons -->
 
         <div class="modal-footer text-center">
